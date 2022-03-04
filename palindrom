@@ -1,0 +1,27 @@
+line 22 truncated.
+  1  DECLARE
+  2     n number;
+  3     m number;
+  4     temp number:=0;
+  5     rem number;
+  6  BEGIN
+  7     n :=&n;
+  8     m :=n;
+  9     while n>0
+ 10     loop
+ 11        rem := mod(n,10);
+ 12        temp := (temp*10)+rem;
+ 13        n := trunc(n/10);
+ 14     end loop;
+ 15     if m = temp
+ 16     then
+ 17        dbms_output.put_line('Palindrome');
+ 18     else
+ 19        dbms_output.put_line('Not Palindrome');
+ 20     end if;
+ 21* end;
+ 22  
+ 23  /
+Enter value for n: 111
+old   7:    n :=&n;
+new   7:    n :=111;
