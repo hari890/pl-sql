@@ -1,0 +1,28 @@
+SQL> set serveroutput on;
+SQL> 
+SQL> declare
+  2  n number;
+  3  i number;
+  4   
+  5  begin
+  6  n:=&n;
+  7  for i in 1..10
+  8  loop
+  9  dbms_output.put_line(n||' x '||i||' = '||n*i);
+ 10  end loop;
+ 11  end;
+ 12  
+ 13  /
+Enter value for n: 5
+old   6: n:=&n;
+new   6: n:=5;
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50
