@@ -1,0 +1,34 @@
+SQL>  set serveroutput on;
+line 22 truncated.
+  1  -- declare variable a = 0 for first digit
+  2     -- declare variable b = 0 for Second d
+  3     -- declare variable temp for first dig
+  4  declare
+  5  a number := 0;
+  6  b number := 1;
+  7  temp number;
+  8  n number :=&n;
+  9  i number;
+ 10  begin
+ 11     dbms_output.put_line('fibonacci series
+ 12     dbms_output.put_line(a);
+ 13     dbms_output.put_line(b);
+ 14     for i in 2..n
+ 15     loop
+ 16        temp:= a + b;
+ 17        a := b;
+ 18        b := temp;
+ 19        dbms_output.put_line(temp);
+ 20     end loop;
+ 21* end;
+ 22  /
+Enter value for n: 5
+old   8: n number :=&n;
+new   8: n number :=5;
+fibonacci series is :
+0
+1
+1
+2
+3
+5
